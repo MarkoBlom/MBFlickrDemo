@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".view.SplashActivity">
+
+    <!-- SKY BACKGROUND IMAGE ON TOP-->
+    <ImageView
+        android:id="@+id/activity_splash_sky_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sky"
+        android:layout_alignParentTop="true"/>
+
+    <!-- PHONE BOTTOM PART IMAGE -->
+    <ImageView
+        android:id="@+id/activity_splash_phone_image_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_bottom"
+        android:layout_alignBottom="@id/activity_splash_sky_image"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <!-- COUNTER IMAGE FOR SCROLLING DOWN -->
+    <ImageView
+        android:id="@+id/activity_splash_counter_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/activity_splash_phone_image_bottom"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+
+    <!-- PHONE TOP PART IMAGE FOR SCROLLING DOWN -->
+    <ImageView
+        android:id="@+id/activity_splash_phone_image_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_top"
+        android:layout_above="@id/activity_splash_phone_image_bottom"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <!-- This is Flickr Client Demo App from Marko -->
+    <TextView
+        android:id="@+id/activity_splash_header_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/activity_splash_phone_image_top"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:text="Flickr Client Demo">
+    </TextView>
+
+    <!-- FULL PHONE IMAGE FOR TRANSITION -->
+    <ImageView
+        android:id="@+id/activity_splash_phone_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone"
+        android:layout_below="@id/activity_splash_sky_image"
+        android:layout_centerHorizontal="true" />
+
+    <!-- TEXT CONTENT AREA, JUST TO HIDE THE PHONE IMAGE-->
+    <LinearLayout
+        android:id="@+id/activity_splash_text_area"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/activity_splash_sky_image"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <!-- Features in this demo:-->
+    <TextView
+        android:id="@+id/activity_splash_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_splash_sky_image"
+        android:layout_alignLeft="@id/activity_splash_phone_image"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/font_color"
+        android:textSize="24sp"
+        android:text="Features in this demo:"
+        />
+
+    <!-- Flickr API-->
+    <LinearLayout
+        android:id="@+id/activity_splash_flickr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_splash_title_txt"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/activity_splash_phone_image">
+
+        <!-- GREEN CHECKMARK -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/checkmark_green_tick"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/activity_splash_flickr_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_color"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="Flickr API via AsynTask"/>
+    </LinearLayout>
+
+    <!-- transition-->
+    <LinearLayout
+        android:id="@+id/activity_splash_transition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_splash_flickr"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/activity_splash_phone_image">
+
+        <!-- GREEN CHECKMARK -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/checkmark_green_tick"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/activity_splash_transition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_color"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="Image transitions"/>
+    </LinearLayout>
+
+    <!-- Animations -->
+    <LinearLayout
+        android:id="@+id/activity_splash_animations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_splash_transition"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/activity_splash_phone_image">
+
+        <!-- GREEN CHECKMARK -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/checkmark_green_tick"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/activity_splash_animations_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_color"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="Image animations"/>
+    </LinearLayout>
+
+    <!-- Screen transition -->
+    <LinearLayout
+        android:id="@+id/activity_splash_screen_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_splash_animations"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/activity_splash_phone_image">
+
+        <!-- GREEN CHECKMARK -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/checkmark_green_tick"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/activity_splash_screen_trans_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_color"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="Screen transition"/>
+    </LinearLayout>
+
+</RelativeLayout>
